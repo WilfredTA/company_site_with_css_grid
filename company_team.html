@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>SpaceDesign</title>
+	<style>
+
+		ul {
+			-webkit-padding-start: 0;
+		}
+
+		* {
+			box-sizing: border-box;
+		}
+
+		h1, h2, h3, h4, h5 h6, p {
+			margin: 0;
+		}
+
+		a {
+			
+			border: none;
+			text-decoration: none;
+			color: gray;
+		}
+		body{
+			display: grid;
+			grid-template-columns: 100vw;
+			grid-template-rows: 35fr 50fr 301px;
+			grid-template-areas:
+				"header"
+				"main-content"
+				"footer";
+
+			font-size: 20px;
+			font-family: Helvetica;
+			box-sizing: border-box;
+			color: #45494d;
+			line-height: 1.5rem;
+		}
+
+		header {
+			grid-area: header;
+			background-image: url("images/bg_body.gif");
+			display: grid;
+			grid-template-columns: 1fr;
+			grid-template-rows: auto;
+			grid-template-areas:
+				" image "
+				" navigation ";
+		
+		}
+
+		main {
+			grid-area: main-content;
+			background-color: #ffffff;
+			display: grid;
+			grid-template-columns: 1fr 1fr 3fr 1fr 1fr;
+			grid-template-rows: auto auto;
+
+			grid-template-areas:
+				" . . first_article . ."
+				" . team-members team-members team-members ."
+
+			;
+		}
+
+		container.team-members{
+			grid-column: 2 / 5;
+			grid-area: team-members;
+			justify-self: center;
+			margin-bottom: 230px;
+
+		}
+
+		main article.first {
+			grid-area: first_article;
+			justify-self: center;
+			grid-column: 2 / 5;
+			margin-bottom: 130px;
+
+		}
+
+
+		footer {
+			grid-area: footer;
+			background-color: #e7e7e7;
+			width: 100%;
+		}
+
+
+
+		header img {
+			display: block;
+			grid-area: image;
+			justify-self: center;
+			margin-top: 133px;
+			margin-bottom: 126px;
+		}
+
+		header nav {
+			
+			grid-area: navigation;
+			background: transparent;
+			justify-self: center;
+			height: 79px;
+
+		}
+		ul {
+			list-style: none;
+			display: block;
+			margin: 0;
+
+		}
+
+		ul li {
+			box-sizing: border-box;
+			display: inline-block;
+			font-weight: normal;
+			
+		}
+
+
+		article.first h2 {
+			text-align: center;
+			font-size: 36px;
+			color: #282828;
+			margin-top: 124px;
+			margin-bottom: 43px;
+
+		}
+
+		p {
+			text-align: center;
+		}
+
+		footer p {
+			display: block;
+			margin-top: 90px;
+			color: #b2b2b2;
+		}
+
+		footer article {
+			width: 510px;
+			margin: 0 auto;
+			margin-bottom: 48px;
+		}
+
+		footer section {
+			width: 557px;
+			margin: 0 auto;
+			display: block;
+		}
+
+		.icon {
+			width: 46px;
+			height: 46px;
+			background-image: url("images/icons_social-media.png");
+			display: inline-block;
+			margin-right: 123px;
+		}
+
+		.facebook {
+			background-position: 0 -46px;
+
+		}
+
+		.mail {
+			background-position: 0 -92px;
+
+		}
+
+		.insta {
+			background-position: 0 100%;
+			margin-right: 0;
+
+		}
+
+		nav a {
+			color: #cacaca;
+			font-size: 26px;
+			text-transform: uppercase;
+			display: inline;
+			padding: 0 42px;
+		}
+
+		nav a:active, nav a:hover, nav a:focus {
+			color: #6db9ff;
+		}
+
+		.active {
+			color: #6db9ff;
+		}
+
+		figcaption {
+			display: block;
+			margin-top: 29px;
+			font-size: 24px;
+			color: #3e59b2;
+			text-align: center;
+		}
+
+		figure {
+			display: inline-block;
+			margin: 0 28px;
+		}
+
+
+	</style>
+</head>
+
+<body>
+	<header>
+		<img src="images/logo.png" alt="space logo" />
+		<nav>
+			<ul>
+				<li>
+					<a href="company_home.html">Home</a>
+				</li><!--
+			--><li>
+					<a href="company_projects.html">Projects</a>
+				</li><!--
+			 --><li>
+					<a class="active" href="company_team.html">Team</a>
+				</li>
+			</ul>
+		</nav>
+
+	</header>
+	<main>
+		<article class="first">
+			<h2>&bull; Team &bull;</h2>
+			<p> 
+				Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniadolor
+			</p>
+		</article>
+		<container class="team-members">
+			<figure>
+				<img src="images/img_kevin.jpg" alt="kevin" />
+				<figcaption>Kevin</figcaption>
+			</figure>
+			<figure>
+				<img src="images/img_louis.jpg" alt="lewis" />
+				<figcaption>Lewis</figcaption>
+			</figure>
+			<figure>
+				<img src="images/img_kasper.jpg" alt="kasper" />
+				<figcaption>Kasper</figcaption>
+			</figure>
+			<figure>
+				<img src="images/img_chris.jpg" alt="chris" />
+				<figcaption>Chris</figcaption>
+			</figure>
+		</container>
+
+	</main>
+	<footer>
+		
+		<article>
+			<p>
+				Lorem ipsum dolor sit amet, consectetu
+	 			incididunt ut labore et dolore magna aliqua. Ut enim ad
+	 		</p>
+	 	</article>
+		 <section>
+			<div class="icon">
+		 	</div><!--
+		 --><div class="icon facebook">
+		 	</div><!--
+		 --><div class="icon mail">
+		 	</div><!--
+		 --><div class="icon insta">
+		 	</div>
+		 </section>
+
+	</footer>
+</body>
+
+
+
+</html>
